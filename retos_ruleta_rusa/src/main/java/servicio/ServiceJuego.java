@@ -54,9 +54,10 @@ public class ServiceJuego {
         Jugador py = new Jugador();
         Random rand = new Random();
         int id = rand.nextInt(9999);
-        System.out.println("Recibio ID: " + id);
+        
         System.out.println("Nombre: ");
         String nombre = scan.next();
+        System.out.println("Recibio ID: " + id);
         py.setId(id);
         py.setMojado(false);
         py.setNombre(nombre);
