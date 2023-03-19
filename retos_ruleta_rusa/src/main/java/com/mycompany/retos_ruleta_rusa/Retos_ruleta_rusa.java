@@ -55,7 +55,7 @@ public class Retos_ruleta_rusa {
         if (jugadorMojado != null) {
             System.out.println("El que ha sido mojado fue: " + jugadorMojado.getNombre());
         } else {
-            System.out.println("No se encontró ningún jugador mojado en el conjunto Set");
+            System.out.println("No se encontró ningún jugador mojado, se han salvado!");
         }
       
     }
