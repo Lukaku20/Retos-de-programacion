@@ -13,30 +13,30 @@ public class Retos_ruleta_rusa {
     static Scanner scan = new Scanner(System.in);
     
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("------Ruleta Rusa!");
+        System.out.println("------Ruleta Rusa! ----");
         ServiceJuego rusa = new ServiceJuego();
-        System.out.println("-----------------");
+        System.out.println("-----------------------");
         //crea el conjunto y el revolver
         Set<Jugador>jugadores = new HashSet<>();
         Revolver r = new Revolver();
         
         //iniciando el Juego.
         System.out.println(" ");
-        System.out.println("Se debe llenar la carga del revolver: -----");
+        System.out.println("Se debe llenar la carga del revolver: [•] ");
         r.llenarCarga();
-        System.out.println("Ahora completemos el juego: ");
+        System.out.println(r.toString());
+        System.out.println("Ahora, completemos el juego con los jugadores: ");
         rusa.llenarJuego(jugadores, r);
         rusa.pasaElQueSigue(jugadores, r);
         for (Jugador jugadore : jugadores) {
             if(jugadore.isMojado()){
-                System.out.println(" ");
+                System.out.println("          I          ");
                 System.out.println("---Presiona Enter----");
-                System.out.println("La quedó fue: " + jugadore.toString());
+                System.out.println("El que la quedó fue: " + jugadore.toString());
                 break;
         }
         }
-        // Suponiendo que el conjunto Set se llama "jugadores"
-        // y que cada elemento es de la clase "Jugador"
+        // Detecta que algun jugador haya sido mojado.
 
         Jugador jugadorMojado = null;
 

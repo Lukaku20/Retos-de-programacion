@@ -64,7 +64,7 @@ public class Revolver {
 
     @Override
     public String toString() {
-        return "Revolver: " + " Posicion: " + posicionActual + " Carga: " + posicionCarga + '}';
+        return "Revolver: " + " Posicion: " + posicionActual + " Carga: " + posicionCarga + '\n';
     }
     
 }

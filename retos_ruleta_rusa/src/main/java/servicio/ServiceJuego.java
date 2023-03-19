@@ -81,7 +81,7 @@ public class ServiceJuego {
      
      public void pasaElQueSigue(Set<Jugador> jugadores, Revolver revol) throws InterruptedException{
          
-         revol.llenarCarga();
+         //revol.llenarCarga();
          
          for (Jugador jugadore : jugadores) {
              ronda(jugadore, revol);
