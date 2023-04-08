@@ -1,4 +1,4 @@
-BIENVENIDO A LA FUNCIÓN DEL CINE!
+### BIENVENIDO A LA FUNCIÓN DEL CINE!
 
 /*Nos piden hacer un programa sobre un Cine, que tiene una sala con un conjunto de asientos
 (8 filas por 6 columnas). De Cine nos interesa conocer la película que se está reproduciendo, la
