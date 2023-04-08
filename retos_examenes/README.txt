@@ -1,0 +1,6 @@
+#### Ejercicio de crear un meclador de examenes
+## Usando clases y conjuntos crea un examen y luego revuelve las consignas para reordenarlo
+
+El diagrama de UML identifica 2 clases de dominio(entidad): Examen, que tiene un ArrayList<Consigna> y un String materia; y Consigna, que tiene String pregunta, String[]opciones y número.
+En el servicio se hallan las funciones para hacer preguntas que tengan posibles respuestas ( cargar pregunta, cargar respuestas), otra para colocar cada pregunta con su posible respuesta en un item consigna, enumerándolas. Y otras funciones para: cargar la materia del examen e imprimir el examen.
+Cabe aclarar que la clase Examen tambien posee dos funciones más, revolver el Examen (shuffle en JAVA) y toString() predefinido imprime el examen finalizado concatenando todas las consignas por medio de una funcion imprimir consignas, que utiliza la clase StringBuilder para armar una cadena y saltos de línea para que cada consigna con sus opciones esten bien separadas. Finalmente, el examen es impreso por pantalla, para que el usuario lo copie y le de formato en un editor de texto.

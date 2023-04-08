@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="retos_examenes">
+  <ClassDiagramComponents>
+    <Class name="Consigna" package="dominio" visibility="public" xPosition="521.0" yPosition="20.0">
+      <Fields>
+        <Field name="pregunta" type="String" visibility="protected"/>
+        <Field name="opciones" type="String[]" visibility="protected"/>
+        <Field name="num" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="pregunta"/>
+          <Argument type="String[]" name="opciones"/>
+          <Argument type="int" name="num"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPregunta" returnType="String" visibility="public"/>
+        <Method name="setPregunta" returnType="void" visibility="public">
+          <Argument type="String" name="pregunta"/>
+        </Method>
+        <Method name="getOpciones" returnType="String[]" visibility="public"/>
+        <Method name="setOpciones" returnType="void" visibility="public">
+          <Argument type="String[]" name="opciones"/>
+        </Method>
+        <Method name="getNum" returnType="int" visibility="public"/>
+        <Method name="setNum" returnType="void" visibility="public">
+          <Argument type="int" name="num"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Examen" package="dominio" visibility="public" xPosition="19.0" yPosition="20.0">
+      <Fields>
+        <Field name="vector" type="ArrayList&lt;Consigna&gt;" visibility="protected"/>
+        <Field name="materia" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Consigna&gt;" name="vector"/>
+          <Argument type="String" name="materia"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVector" returnType="ArrayList&lt;Consigna&gt;" visibility="public"/>
+        <Method name="setVector" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Consigna&gt;" name="vector"/>
+        </Method>
+        <Method name="getMateria" returnType="String" visibility="public"/>
+        <Method name="setMateria" returnType="void" visibility="public">
+          <Argument type="String" name="materia"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="imprimirConsignas" returnType="String" visibility="public"/>
+        <Method name="revolverConsignas" returnType="void" visibility="public">
+          <Argument type="ArrayList" name="consignas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServicioExamen" package="dominio.servicios" visibility="public" xPosition="339.0" yPosition="416.0">
+      <Fields>
+        <Field name="scan" type="Scanner" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarMateria" returnType="void" visibility="public">
+          <Argument type="Examen" name="ex"/>
+        </Method>
+        <Method name="rellenarConsigna" returnType="Consigna" visibility="public"/>
+        <Method name="enumerarlas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Consigna&gt;" name="vector"/>
+        </Method>
+        <Method name="imprimirExamen" returnType="void" visibility="public">
+          <Argument type="Examen" name="fin"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Retos_examenes" package="main" visibility="public" xPosition="885.0" yPosition="143.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="vector" source="dominio.Examen" target="dominio.Consigna" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Consigna&gt;"/>
+    <UseRelation source="dominio.servicios.ServicioExamen" target="dominio.Examen" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dominio.servicios.ServicioExamen" target="dominio.Consigna" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dominio.Examen" target="dominio.Consigna" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

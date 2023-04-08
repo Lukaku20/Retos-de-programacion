@@ -58,7 +58,7 @@ public class Revolver {
         if(posicionActual!=0){
             posicionActual--;
         } else {
-            posicionCarga = 5;
+            posicionActual = 5;
         }
     }
 
